@@ -36,8 +36,8 @@ class SendCommand extends Command
     /**
      * Execute method
      *
-     * @param \Maymeow\ActionMattermostNotify\Symfony\Component\Console\Input\InputInterface $input Input interface
-     * @param \Maymeow\ActionMattermostNotify\Symfony\Component\Console\Output\OutputInterface $output Output interface
+     * @param \Symfony\Component\Console\Input\InputInterface $input Input interface
+     * @param \Symfony\Component\Console\Output\OutputInterface $output Output interface
      * @return int
      */
     public function execute(InputInterface $input, OutputInterface $output): int
