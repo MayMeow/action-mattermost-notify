@@ -1,9 +1,9 @@
 name: 'Action Mattermost Notify'
 author: 'May Meow'
-description: 'Containerized environment to send notifications to Mattermost'
+description: 'Containerized environment to send notifications to Mattermost with PHP'
 branding:
-  icon: 'check-square'
-  color: 'blue'
+  icon: 'command'
+  color: 'purple'
 inputs:
   message:
     description: 'Enter the message to send to Mattermost'

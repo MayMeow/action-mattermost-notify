@@ -1,4 +1,4 @@
-# Action Mattermost notify
+# Action Mattermost Notify
 
 PHP script that can be used to send an message to Mattermost.
 
@@ -27,4 +27,18 @@ To send message with this script use
 
 ```bash
 action-mattermost-notify send "Your message" --url https://your.mattermost.webhook.url
+```
+
+## Action usage
+
+Add following code to your workflow
+
+```bash
+- uses: MayMeow/action-mattermost-notify@main # this using main branch instead of published version
+  with:
+    url: ${{ secrets.MATTERMOST_WEBHOOK }} # required
+    message: "Hello world from ${{ github.repository }}" # required
+    username: "" # use if you want to change username of message sender
+    channel: "" # use if you want to set changel where message will be send
+    icon: "" # url of sender's profile icon
 ```
