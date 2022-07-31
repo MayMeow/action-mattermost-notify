@@ -7,7 +7,7 @@ on:
     branches: [ main, dev/* ]
 
 jobs:
-  codesniffer-admin:
+  codesniffer:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,7 +16,7 @@ jobs:
         with:
           composer_script: 'cs-check'
 
-  stan-admin:
+  stan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
