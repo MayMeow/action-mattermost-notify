@@ -1,0 +1,31 @@
+name: 'Action Mattermost Notify'
+author: 'May Meow'
+description: 'Containerized environment to send notifications to Mattermost'
+branding:
+  icon: 'check-square'
+  color: 'blue'
+inputs:
+  message:
+    description: 'Enter the message to send to Mattermost'
+    required: true
+  url:
+    description: 'The URL to send the message to'
+    required: true
+  channel:
+    description: 'Enter the channel to send the message to'
+    required: false
+  icon:
+    description: 'Enter the icon to use for the message'
+    required: false
+  username:
+    description: 'Enter the username to use for the message'
+    required: false
+runs:
+  using: 'docker'
+  image: '.docker/Dockerfile'
+  args:
+    - ${{ inputs.message }}
+    - ${{ inputs.url }}
+    - ${{ inputs.channel }}
+    - ${{ inputs.icon }}
+    - ${{ inputs.username }}

@@ -14,6 +14,11 @@ class SendCommand extends Command
 {
     protected static $defaultName = 'send';
 
+    /**
+     * Configure method
+     *
+     * @return void
+     */
     public function configure(): void
     {
         $this
@@ -28,6 +33,13 @@ class SendCommand extends Command
             ->addOption('url', null, InputOption::VALUE_OPTIONAL, 'The URL to send the message with');
     }
 
+    /**
+     * Execute method
+     *
+     * @param \Maymeow\ActionMattermostNotify\Symfony\Component\Console\Input\InputInterface $input Input interface
+     * @param \Maymeow\ActionMattermostNotify\Symfony\Component\Console\Output\OutputInterface $output Output interface
+     * @return int
+     */
     public function execute(InputInterface $input, OutputInterface $output): int
     {
         $message = $input->getArgument('message');
